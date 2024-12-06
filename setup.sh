@@ -1,15 +1,44 @@
-#!/bin/bash
+# Stable Diffusion Web App
 
-# Step 1: Initialize Conda (only needs to be done once)
-conda init
+A Flask-based web application for generating images using Stable Diffusion, optimized for systems with low GPU memory.
 
-# Step 2: Create a new conda environment
-conda create -n voice-chat-env python=3.9 -y
+## Features
 
-# Step 3: Activate the new environment
-source activate voice-chat-env
+- Web interface for text-to-image generation
+- Memory-optimized for low memory GPUs
+- Automatic fallback to smaller resolutions if out of memory
 
-# Step 4: Install the dependencies from requirements.txt
-pip install -r requirements.txt
 
-pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
+## Requirements
+
+- Python 3.8+
+- CUDA-capable GPU with 4GB+ VRAM
+- PyTorch with CUDA support
+- Flask
+
+## Installation
+
+1. Clone the repository:
+
+```bash
+git clone https://github.com/arshDeepTech/Interactive_AI_Canvas.git
+```
+
+2. Install dependencies:
+
+```bash
+chmod +x setup.sh
+bash setup.sh
+```
+
+3. Run the app:
+    
+```bash
+python app.py
+```
+
+4. Open the browser and navigate to:
+
+```bash
+http://localhost:5000
+```
